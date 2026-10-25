@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Devon Restaurants — the restaurant index for Devon Avenue, Chicago</title>
+<meta name="description" content="Devon Restaurants is an independent index of the restaurants on Devon Avenue, Chicago's South Asian food corridor — organized by cuisine, written by people who eat there.">
+<link rel="canonical" href="https://devonrestaurants.com/">
+<meta property="og:title" content="Devon Restaurants — the restaurant index for Devon Avenue">
+<meta property="og:description" content="An independent, cuisine-by-cuisine index of Devon Avenue restaurants, in progress now.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://devonrestaurants.com/">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2314161A'/%3E%3Cpath d='M7 7h8a6.5 6.5 0 0 1 0 13H7z' fill='none' stroke='%23D8A531' stroke-width='2.2'/%3E%3Cpath d='M7 24h18' stroke='%23B5301F' stroke-width='2.6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Devon Restaurants","url":"https://devonrestaurants.com/","description":"An independent index of restaurants on Devon Avenue, Chicago's South Asian food corridor, organized by cuisine.","inLanguage":"en-US"}
+</script>
+<style>
+:root{
+  --paper:#FAF8F2; --ink:#14161A; --cardinal:#B5301F; --ochre:#D8A531;
+  --slate:#5A6472; --rule:#D8D2C2;
+  --disp:"Archivo",system-ui,sans-serif; --body:"Lora",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65}
+a{color:var(--cardinal)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--ochre);outline-offset:2px}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+/* Masthead */
+header.site{border-bottom:3px double var(--ink)}
+header.site .wrap{padding-top:22px;padding-bottom:16px}
+.masthead{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand b{font-family:var(--disp);font-weight:800;font-size:1.55rem;letter-spacing:-.01em;line-height:1}
+.brand small{display:block;font-family:var(--body);font-style:italic;font-size:.85rem;color:var(--slate);font-weight:400;margin-top:3px}
+nav.main{font-family:var(--disp);font-weight:500;font-size:.93rem}
+nav.main a{color:var(--ink);text-decoration:none;margin-left:20px}
+nav.main a:hover{color:var(--cardinal);text-decoration:underline;text-underline-offset:4px}
+/* Hero: editorial masthead statement over rules */
+.hero{border-bottom:1px solid var(--rule)}
+.hero .wrap{padding-top:58px;padding-bottom:54px}
+.hero h1{font-family:var(--disp);font-weight:800;letter-spacing:-.02em;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.04;max-width:18ch}
+.hero .deck{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;margin-top:26px;align-items:start}
+.hero p.lede{font-size:1.14rem;max-width:56ch}
+.hero-rulebox{border:1.5px solid var(--ink);padding:18px 20px;font-size:.96rem;background:#fff}
+.hero-rulebox b{font-family:var(--disp);display:block;margin-bottom:6px}
+.hero-rulebox span{color:var(--slate)}
+/* Index */
+section{padding:56px 0}
+.kicker{font-family:var(--disp);font-weight:600;color:var(--cardinal);font-size:.95rem;margin-bottom:8px}
+h2{font-family:var(--disp);font-weight:800;letter-spacing:-.01em;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.15;margin-bottom:14px}
+.index{border-bottom:1px solid var(--rule)}
+.index .intro{max-width:62ch;margin-bottom:34px}
+.cuisine{border-top:2px solid var(--ink);padding:22px 0 30px}
+.cuisine-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.cuisine-head h3{font-family:var(--disp);font-weight:800;font-size:1.5rem;letter-spacing:-.01em}
+.cuisine-head .state{font-family:var(--disp);font-weight:500;font-size:.85rem;color:#fff;background:var(--slate);padding:4px 10px}
+.cuisine p.about{max-width:62ch;color:#3a4049;margin-top:8px}
+.entry{margin-top:18px;border-left:3px solid var(--ochre);padding:12px 18px;background:#fff}
+.entry .tag{font-family:var(--disp);font-weight:600;font-size:.78rem;color:var(--cardinal);display:inline-block;border:1px solid var(--cardinal);padding:2px 8px;margin-bottom:8px}
+.entry h4{font-family:var(--disp);font-weight:600;font-size:1.08rem}
+.entry p{font-size:.97rem;color:#3a4049;max-width:66ch}
+.entry dl{display:flex;gap:26px;flex-wrap:wrap;margin-top:8px;font-size:.88rem}
+.entry dt{font-family:var(--disp);font-weight:600;color:var(--slate)}
+.entry dd{margin:0}
+/* Method */
+.method{background:var(--ink);color:#EAE6DA}
+.method h2{color:#fff}
+.method .cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:34px;margin-top:26px}
+.method .col{border-top:2px solid var(--ochre);padding-top:14px}
+.method .col svg{display:block;margin-bottom:12px}
+.method .col b{font-family:var(--disp);display:block;font-size:1.05rem;margin-bottom:6px;color:#fff}
+.method .col p{font-size:.96rem;color:#C8C2B4}
+/* Waitlist */
+.waitlist .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.waitlist p{max-width:52ch;margin-bottom:14px}
+form{display:grid;gap:14px}
+label{font-family:var(--disp);font-weight:600;font-size:.92rem}
+input{width:100%;padding:11px 12px;border:1.5px solid var(--ink);border-radius:0;background:#fff;font:inherit;font-size:.98rem}
+.btn{display:inline-block;padding:12px 24px;background:var(--cardinal);color:#fff;border:0;font-family:var(--disp);font-weight:600;font-size:.98rem;cursor:pointer;text-decoration:none}
+.btn:hover{background:#9a2616}
+.form-note{font-size:.88rem;color:var(--slate);font-style:italic}
+footer.site{border-top:3px double var(--ink);padding:36px 0 28px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:.92rem}
+footer nav a{color:var(--ink);margin-right:18px}
+footer .fine{color:var(--slate);max-width:60ch}
+@media (max-width:860px){
+  .hero .deck,.waitlist .wrap{grid-template-columns:1fr}
+  .method .cols{grid-template-columns:1fr}
+}
+@media (max-width:540px){nav.main a{margin-left:0;margin-right:16px}}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap masthead">
+    <a class="brand" href="/" aria-label="Devon Restaurants home">
+      <svg width="40" height="40" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" fill="#14161A"/><path d="M7 7h8a6.5 6.5 0 0 1 0 13H7z" fill="none" stroke="#D8A531" stroke-width="2.2"/><path d="M7 24h18" stroke="#B5301F" stroke-width="2.6"/></svg>
+      <span><b>Devon Restaurants</b><small>An index of Chicago's South Asian food street</small></span>
+    </a>
+    <nav class="main" aria-label="Main">
+      <a href="#index">The index</a>
+      <a href="#method">How we list</a>
+      <a href="#waitlist">Guide waitlist</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap">
+    <h1>Every restaurant on Devon Avenue, in one honest index.</h1>
+    <div class="deck">
+      <p class="lede">Devon Avenue on Chicago's far north side holds one of the densest runs of Indian, Pakistani, and Bangladeshi restaurants in the country — biryani houses next to chaat counters next to sweet shops. There's no good map of it. We're walking the avenue block by block and writing one: a plain-text index, organized by cuisine, with the details that actually matter when you're choosing where to eat.</p>
+      <div class="hero-rulebox">
+        <b>House rules</b>
+        <span>No paid placement. No star ratings. No listicles. A restaurant gets in by being on Devon and being open — and gets described, not scored.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="index" class="index">
+  <div class="wrap">
+    <p class="kicker">The index</p>
+    <h2>Organized by cuisine, written from visits.</h2>
+    <p class="intro">The first edition is being researched now. Below is the structure of the finished index, with one example entry per section so you can see the format. The examples are illustrative, not real businesses — real entries are added only after we've eaten there.</p>
+
+    <div class="cuisine">
+      <div class="cuisine-head">
+        <h3>Pakistani &amp; North Indian</h3>
+        <span class="state">In research — entries publish with edition one</span>
+      </div>
+      <p class="about">The backbone of the avenue: karahi, nihari, tandoor breads, and the long-simmered pots that built Devon's reputation. This will be the largest section of the index.</p>
+      <div class="entry">
+        <span class="tag">Example listing — format only, not a real restaurant</span>
+        <h4>Entry name</h4>
+        <p>Two or three sentences on what the kitchen does best, written from a visit — which pot to order, what comes with it, when the tandoor line is shortest.</p>
+        <dl>
+          <div><dt>Order first</dt><dd>The dish we'd send a first-timer to</dd></div>
+          <div><dt>Room</dt><dd>Counter, family hall, or cash-only canteen</dd></div>
+          <div><dt>Good for</dt><dd>Late dinners, big groups, solo lunch</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="cuisine">
+      <div class="cuisine-head">
+        <h3>South Indian</h3>
+        <span class="state">In research — entries publish with edition one</span>
+      </div>
+      <p class="about">Dosa and idli houses, filter coffee, thali lunches. Fewer in number on Devon than the northern kitchens, which makes knowing the good ones matter more.</p>
+      <div class="entry">
+        <span class="tag">Example listing — format only, not a real restaurant</span>
+        <h4>Entry name</h4>
+        <p>What the griddle turns out, how the sambar runs, whether the thali changes daily. Same format as every section: described, not scored.</p>
+        <dl>
+          <div><dt>Order first</dt><dd>The dish we'd send a first-timer to</dd></div>
+          <div><dt>Room</dt><dd>What eating there is actually like</dd></div>
+          <div><dt>Good for</dt><dd>Weekend breakfast, vegetarian tables</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="cuisine">
+      <div class="cuisine-head">
+        <h3>Chaat, snacks &amp; sweets</h3>
+        <span class="state">In research — entries publish with edition one</span>
+      </div>
+      <p class="about">The counters: pani puri and samosa chaat, falooda, jalebi by weight, mithai boxes for every occasion. The section most likely to make you leave the house.</p>
+      <div class="entry">
+        <span class="tag">Example listing — format only, not a real restaurant</span>
+        <h4>Entry name</h4>
+        <p>Which counter item travels and which doesn't, what's fried to order, what sells out by evening.</p>
+        <dl>
+          <div><dt>Order first</dt><dd>The counter item worth the trip</dd></div>
+          <div><dt>Room</dt><dd>Standing counter or a few tables</dd></div>
+          <div><dt>Good for</dt><dd>An afternoon stop, a sweets box to carry home</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="cuisine">
+      <div class="cuisine-head">
+        <h3>Bangladeshi, grills &amp; everything else</h3>
+        <span class="state">In research — entries publish with edition one</span>
+      </div>
+      <p class="about">Bangladeshi kitchens, kabab grills, buffets, and the avenue's handful of outliers that fit no section but belong in the index anyway.</p>
+    </div>
+  </div>
+</section>
+
+<section id="method" class="method">
+  <div class="wrap">
+    <p class="kicker" style="color:var(--ochre)">How we list</p>
+    <h2>Three rules make the index worth trusting.</h2>
+    <div class="cols">
+      <div class="col">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D8A531" stroke-width="2" aria-hidden="true"><path d="M13 4 5 14h6l-1 6 8-10h-6z"/></svg>
+        <b>We eat first, write second</b>
+        <p>No entry is compiled from menus or other websites. If we haven't sat down and ordered, the restaurant isn't in the edition yet.</p>
+      </div>
+      <div class="col">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D8A531" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <b>Described, never scored</b>
+        <p>No stars, no rankings, no "best of." Each entry says what a kitchen does well and who it suits, and lets you choose.</p>
+      </div>
+      <div class="col">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D8A531" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>
+        <b>Free to be listed, always</b>
+        <p>Restaurants can't pay to appear, to rank, or to edit their entry. Corrections of fact are always welcome; rewrites are not for sale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="waitlist" class="waitlist">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Guide waitlist</p>
+      <h2>Edition one is being eaten right now.</h2>
+      <p>We're working the avenue roughly west to east, a few kitchens a week. When the first edition publishes, waitlist readers get it first — the full index, plus notes on what didn't make it in and why.</p>
+      <p>If you run a restaurant on Devon, there's nothing to do: being open is the only requirement, and we'll find you.</p>
+    </div>
+    <form action="#" method="post" onsubmit="event.preventDefault();this.querySelector('.form-note').textContent='Thanks — the waitlist isn’t live yet, so nothing was sent. Edition one is coming; check back soon.';">
+      <div>
+        <label for="wl-name">Name</label>
+        <input id="wl-name" name="name" required autocomplete="name">
+      </div>
+      <div>
+        <label for="wl-fav">A Devon spot you already swear by (optional)</label>
+        <input id="wl-fav" name="favorite" placeholder="Helps us know where to eat next">
+      </div>
+      <button class="btn" type="submit">Join the waitlist</button>
+      <p class="form-note">Sign-ups open when edition one publishes. Nothing you type here leaves your browser yet.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <nav aria-label="Footer">
+        <a href="#index">The index</a>
+        <a href="#method">How we list</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+      </nav>
+      <p class="fine" style="margin-top:10px">© 2026 Devon Restaurants. All rights reserved. The index is in research; example entries above show format only and do not describe real businesses.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

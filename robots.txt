@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://devonrestaurants.com/sitemap.xml
